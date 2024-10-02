@@ -48,6 +48,7 @@
       input[type="return"] {
             background-color: #272efc;
             color: white;
+            width: 10%;
             border: none;
             padding: 10px;
             border-radius: 5px;
