@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Login</title>
     <style>
       body{
@@ -59,6 +60,12 @@
             background-color: #5457f9;
       }
 
+      .contenedorLogin li{
+            color: yellow;
+            padding: 10px;
+            
+      }
+
     </style>
 </head>
 <body>
@@ -69,8 +76,9 @@
       <input type="texto" id="usuario" name="usuario" required>
       <label for="contraseña">Contraseña:</label>
       <input type="contraseña" id="contraseña" name="contraseña" required>
-      <input type="return" value="Atras" onclick="location.href='/'">
+      <a class="btn btn-danger" href="/" role="button">Atras</a>
       <input type="submit" value="Entrar">
+      <li><a href="/cuentanueva"> crear nueva cuenta </a></li>
     </form>
   </div>
 </body>

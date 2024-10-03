@@ -7,11 +7,46 @@
     <title>Tokuho</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
-      /* .container-pc{
-        display: block;
-
-      } */
+      .container-lateral {
+      display: flex;
+      height: 100vh; 
+      }
+  
+      .navbar-lateral {
+          width: 220px; /* Ancho del navbar */
+          background-color: #212529; /* Color de fondo */
+          color: white; /* Color del texto */
+          text-align: start; 
+      }
+  
+      .navbar-lateral ul {
+          list-style: none; /* Quitar puntos de la lista */
+      }
+  
+      .navbar-lateral li {
+          margin: 15px 0; /* Espaciado entre los elementos */
+      }
+  
+      .navbar-lateral a {
+          color: white; /* Color del texto del enlace */
+          text-decoration: none; /* Quitar subrayado */
+      }
+  
+      .navbar-lateral a:hover {
+          text-decoration: underline; /* Subrayado al pasar el mouse */
+      }
+  
+      .content {
+          flex: 1; /* Toma el espacio restante */
+          padding: 20px; /* Espaciado interno */
+          overflow-y: auto; /* Scroll si es necesario */
+      }
+  
+      section {
+          margin-bottom: 50px; /* Espaciado entre secciones */
+      }
     </style>
+  
   </head>
 <body>
     <!-- NAVBAR PC -->
@@ -25,13 +60,16 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Videos</a>
+                    <a class="nav-link" href="#">Videos</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">Archivos</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">Publicaciones</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/usuario"> Mi perfil</a>
                   </li>
                 </ul>
                 <form class="d-flex" role="search">
@@ -43,8 +81,8 @@
             </div>
           </nav>
         </div>
-    <div class="p-2 m-4 ">
+    
         @yield('contenido-principal')
-    </div>
+    
 </body>
 </html>

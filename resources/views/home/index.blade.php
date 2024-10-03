@@ -1,7 +1,7 @@
 @extends('home/layouts/master')
 
 @section('contenido-principal')
-  
+<div class="p-2 m-4 ">  
     <h3><strong><ins>Publicaciones recientes:</ins></strong></h3>
     <!-- Cards Publicaciones -->
     <div class="card-group">
@@ -145,4 +145,5 @@
         </div>
       </div>
     <!-- Cards Dojos -->
+</div>
 @endsection
