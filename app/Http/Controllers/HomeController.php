@@ -10,7 +10,11 @@ class HomeController extends Controller
         return view('home.index');
     }
 
-    public function login(){
-        return view('home.login');
+    public function inicio(){
+        return view('home.inicio');
+    }
+
+    public function admin(){
+        return view('home.admin');
     }
 }
