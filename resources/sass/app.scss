@@ -1,6 +1,46 @@
 $body-bg: #222222;
 $primary: #999999;
-form, input, label, p {
+form, input, label, p, li, h3, td {
     color: white !important;
 }
+
+.container-lateral {
+    display: flex;
+    height: 100vh; 
+    }
+
+    .navbar-lateral {
+        width: 220px; /* Ancho del navbar */
+        background-color: #212529; /* Color de fondo */
+        color: white; /* Color del texto */
+        text-align: start; 
+    }
+
+    .navbar-lateral ul {
+        list-style: none; /* Quitar puntos de la lista */
+    }
+
+    .navbar-lateral li {
+        margin: 15px 0; /* Espaciado entre los elementos */
+    }
+
+    .navbar-lateral a {
+        color: white; /* Color del texto del enlace */
+        text-decoration: none; /* Quitar subrayado */
+    }
+
+    .navbar-lateral a:hover {
+        text-decoration: underline; /* Subrayado al pasar el mouse */
+    }
+
+    .content {
+        flex: 1; /* Toma el espacio restante */
+        padding: 20px; /* Espaciado interno */
+        overflow-y: auto; /* Scroll si es necesario */
+    }
+
+    section {
+        margin-bottom: 50px; /* Espaciado entre secciones */
+    }
+
 @import 'bootstrap/scss/bootstrap';

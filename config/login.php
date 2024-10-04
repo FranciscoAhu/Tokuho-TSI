@@ -21,12 +21,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pass = $conn->real_escape_string($_POST['contrasena']);
 
     // Consulta para verificar el usuario
-    $sql = "SELECT * FROM usuario WHERE email='$user'AND contrasena='$pass'";
+    $sql = "SELECT * FROM usuario WHERE email='$user'AND contrasena='$pass' AND estado='1' ";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
         // Obtener los datos del usuario
         $row = $result->fetch_assoc();
+        
         
         $_SESSION['mensaje'] = "Inicio de sesión exitoso. Bienvenido, " . htmlspecialchars($user) . "!";
         header("Location: /admin"); // Redirigir al panel de administración o donde necesites
@@ -36,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
     } else {
         // Contraseña incorrecta
-            $message = "Contraseña o usuario incorrecto. Redirigiendo al inicio de sesión...";
+            $message = "Redirigiendo al inicio de sesión...";
             echo "<script type='text/javascript'>alert('$message');</script>";
             header("refresh:0;url=/inicio"); // Recargar la página de login después de 3 segundos
             exit;

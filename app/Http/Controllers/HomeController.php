@@ -17,4 +17,16 @@ class HomeController extends Controller
     public function admin(){
         return view('home.admin');
     }
+    
+    public function editar(){
+        return view('home.editar');
+    }
+
+    public function cambcontra(){
+        return view('home.cambcontra');
+    }
+    
+    public function borrar(){
+        return view('home.borrar');
+    }
 }

@@ -44,7 +44,7 @@ $conexion=mysqli_connect('localhost','root','','tokuho');
                             <td class="text-center text-light"><?php echo $row['contrasena'];?></td>
                             <td class="text-center text-light"><?php echo $row['nivelUsuario'];?></td>
                             <td class="text-center text-light"><?php echo $row['estado'];?></td>
-                            <td class="text-center text-light"><a href="#">Editar</a> - <a href="#">Borrar</a></td>
+                            <td class="text-center text-light"><a href="/editar">Editar</a> - <a href="/borrar">Borrar</a></td>
                         </tr>
                         <?php }?>
                     </tbody>
