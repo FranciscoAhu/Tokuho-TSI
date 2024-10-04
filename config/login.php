@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pass = $conn->real_escape_string($_POST['contrasena']);
 
     // Consulta para verificar el usuario
-    $sql = "SELECT * FROM usuario WHERE email='$user'AND contrasena='$pass' AND estado='1' ";
+    $sql = "SELECT * FROM usuario WHERE email='$user'AND contrasena='$pass' AND estado='1'  AND idTipo ='1' ";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
